@@ -8,7 +8,6 @@ import {
   doc,
   query,
   orderBy,
-  Firestore,
   type DocumentData,
 } from "firebase/firestore";
 import {
@@ -61,7 +60,6 @@ interface BaseItem {
 
 /** ---------- Component ---------- */
 const HRDashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("overview");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [filterStatus, setFilterStatus] = useState<string>("all");
   const [contacts, setContacts] = useState<BaseItem[]>([]);
